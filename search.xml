@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title><![CDATA[搭建openvpn]]></title>
+    <url>%2F2019%2F05%2F17%2F%E6%90%AD%E5%BB%BAopenvpn%2F</url>
+    <content type="text"><![CDATA[server安装 运行以下脚本自动安装openvpn wget https://git.io/vpn -O openvpn-install.sh &amp;&amp; bash openvpn-install.sh 这时候会有下面的提示： 设置监听的ip，默认是本机ip：可以直接回车 设置公网ip：在浏览器中直接搜索ip，查看公网ip 选择使用哪种协议：选择tcp协议 输入端口号：默认 1194 端口 选择DNS：默认当前系统 输入客户端证书名称：随便起名字 回车继续… 在 ~/ 目录下会生成一个 client.ovpn 的文件, 把这个文件保存下来。 坑 openvpn包找不到，卸载并重新安装epel-release, 并清理yum缓存，并重新生成缓存 yum remove epel-release; yum install epel-release; yum clean all; yum makecache 配置路由器转发 tplink路由 =&gt; 高级功能 =&gt; 虚拟服务器 =&gt; 新增 =&gt; 输入虚拟服务器规则 client安装macos 安装 下载shimo客户端 选择OpenVpn协议 导入 client.ovpn 坑： macos下会提示net.sf.tuntaposx.tun未安装，去下载安装 window 安装 下载openvpn客户端 选择OpenVpn协议 导入 client.ovpn]]></content>
+  </entry>
+</search>
